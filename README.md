@@ -66,8 +66,10 @@ root/
 
 ## Docker commands to start/stop the app in container:
 
+```
 systemctl --user start docker-desktop # start the deamon
 docker compose up --build
 docker compose down
+```
 
 ## Features to be added: CHanges to the UI and add Vector database which will enable vector matching capability required for dynamic prompts and providing context to the LLM (RAG).

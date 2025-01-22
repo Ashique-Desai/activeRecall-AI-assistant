@@ -35,9 +35,15 @@ root/
 
 Created components to record and send the voice blobs to the transcription endpoint and now the issues are resolved and we are getting the text back from the whisper-1 model.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Docker commands to start/stop the app in container:
 
-## Getting Started
+```
+systemctl --user start docker-desktop # start the deamon
+docker compose up --build
+docker compose down
+```
+
+## Start the app without docker
 
 First, run the development server:
 
