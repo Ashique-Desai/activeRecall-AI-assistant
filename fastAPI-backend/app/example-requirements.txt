@@ -1,0 +1,6 @@
+app==0.0.1
+dependency_injector==4.44.0
+fastapi==0.115.6
+openai==1.58.1
+pydantic==2.10.4
+pydantic_settings==2.7.0

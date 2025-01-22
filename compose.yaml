@@ -1,0 +1,46 @@
+services:
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=value
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./fastAPI-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    env_file:
+      - .env
+    volumes:
+      - ./fastAPI-backend:/app
+
+  test:
+    build:
+      context: ./fastAPI-backend
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - .env.test # Use the test-specific env file
+    volumes:
+      - ./fastAPI-backend:/app
+    command: ["pytest"]
+    depends_on:
+      - backend

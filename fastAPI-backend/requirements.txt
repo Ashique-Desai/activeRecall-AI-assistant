@@ -1,0 +1,10 @@
+fastapi==0.115.6
+openai==1.58.1
+pydantic==2.10.4
+python-multipart==0.0.9
+uvicorn==0.24.0
+requests
+dependency-injector # not detected by IDE but installed
+pytest # not detected by IDE but installed
+pytest-asyncio
+chromadb

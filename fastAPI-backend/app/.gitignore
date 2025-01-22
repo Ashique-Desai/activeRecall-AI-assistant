@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Envirnoment variables
+.env
+
+# Virtual Environment
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Other
+.DS_Store
+.pytest_cache/
+*.log
+
+
