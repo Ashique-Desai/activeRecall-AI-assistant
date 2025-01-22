@@ -1,0 +1,55 @@
+# Node.js dependencies
+client/node_modules/
+
+# Yarn dependencies
+client/.pnp/
+client/.pnp.js
+client/.yarn/install-state.gz
+
+# Testing
+client/coverage/
+
+# Next.js
+client/.next/
+client/out/
+
+# Production
+client/build/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment files
+.env*.local
+
+# Vercel
+client/.vercel/
+
+# TypeScript
+client/*.tsbuildinfo
+client/next-env.d.ts
+
+# General temporary files
+*.tmp
+*.swp
+
+# Python virtual environments
+fastAPI/env/
+fastAPI/venv/
+
+# Python cache files
+fastAPI/__pycache__/
+fastAPI/*.pyc
+
+# Environment variables
+*.env
+.env.test
+
+__azurite_db_blob__.json
+__azurite_db_blob_extent__.json
