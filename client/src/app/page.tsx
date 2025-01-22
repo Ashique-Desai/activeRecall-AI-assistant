@@ -63,8 +63,8 @@ export default function Home() {
         const chunk = decoder.decode(value, { stream: true });
         accumulatedChunks += chunk;
 
-        // Update UI every 100 characters or so (currently set at 15)
-        if (accumulatedChunks.length > 15) {
+        // Update UI every 100 characters or so
+        if (accumulatedChunks.length > 100) {
           streamRef.current += accumulatedChunks;
           setRenderTrigger((prev) => !prev);
           accumulatedChunks = "";
