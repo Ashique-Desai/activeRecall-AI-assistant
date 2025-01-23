@@ -5,7 +5,7 @@ type Props = {
   recording: boolean;
   toggleRecording: () => void;
 };
-// Recording button used in the parent component VoiceRecording
+
 const RecordButton: FunctionComponent<Props> = ({
   recording,
   toggleRecording,

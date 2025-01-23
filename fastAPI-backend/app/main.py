@@ -25,11 +25,13 @@ def create_app() -> FastAPI:
         "app.api.v1.chat_routes",
         "app.api.v1.audio_routes",
     ])
+    
 
     # test streaming
     async def fake_video_streamer():
-        for i in range(32000):
-            yield b"some fake video bytes"
+        for i in range(5000):
+           yield f"Frame {i}: some fake video bytes. ".encode() 
+
 
     @app.get("/get-stream")
     async def getStream():

@@ -7,7 +7,8 @@ class OpenAIClient:
     def __init__(self, api_key: str, model: str = "gpt-4o-mini"):
         self.api_key = api_key
         openai.api_key = self.api_key  # Set the API key
-        self.chat = openai.chat  # Directly access the chat API 
+        self.chat = openai.chat  # access the chat API 
+        self.audio = openai.audio # access the audio API 
         self.model = model # Allow model selection
 
         # configure logging
@@ -79,6 +80,8 @@ class OpenAIClient:
         except Exception as e:
             print(f"Error occurred while generating chat response: {e}")
             raise
+
+
 
 
                         

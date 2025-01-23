@@ -1,21 +1,8 @@
 "use client"; // This is a client component
-import Image from "next/image";
 import styles from "./page.module.css";
-import {
-  useState,
-  ChangeEvent,
-  FormEvent,
-  use,
-  useRef,
-  Component,
-} from "react";
-import React, { useEffect } from "react";
-import { Tooltip } from "@nextui-org/react";
-import TypingEffect from "@/components/TypingEffect";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import VoiceToTranscription from "@/components/Voice/VoiceToTranscription";
-
-import { flushSync } from "react-dom";
 
 interface GenerateResponse {
   prompt: string;
@@ -89,7 +76,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Active Recall</title>
-        <link rel="icon" href="/dog.png" />
       </Head>
       <main className={styles.main}>
         <div
@@ -101,9 +87,7 @@ export default function Home() {
             lineHeight: 1,
           }}
         >
-          <p style={{ fontSize: "24px", fontWeight: "700" }}>
-            Active Recall - iteration-2
-          </p>
+          <p style={{ fontSize: "24px", fontWeight: "700" }}>Active Recall</p>
           <p style={{ fontSize: "14px" }}>AI Learning Assistant</p>
         </div>
         <div style={{ overflow: "auto", marginTop: "50px" }}>
@@ -131,7 +115,9 @@ export default function Home() {
               onChange={(e) => setInputText(e.target.value)}
             />
 
-            {/* <button type="submit">Send</button> */}
+            <button style={{ margin: "5px", padding: "3px" }} type="submit">
+              Send Text
+            </button>
             <VoiceToTranscription />
           </div>
         </form>

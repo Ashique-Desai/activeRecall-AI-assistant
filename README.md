@@ -1,6 +1,6 @@
 # AI Practice app for students using active recall techniques (frontend Next.js, Backend python)
 
-## Folder structure (New Folder Structure for fastAPI-backend)
+## Folder structure
 
 ```
 root/
@@ -67,9 +67,11 @@ root/
 ## Docker commands to start/stop the app in container:
 
 ```
-systemctl --user start docker-desktop # start the deamon
+systemctl --user start docker-desktop # start the docker engine
 docker compose up --build
 docker compose down
+
+systemctl --user stop docker-desktop # # stop the docker engine
 ```
 
 ## Features to be added: CHanges to the UI and add Vector database which will enable vector matching capability required for dynamic prompts and providing context to the LLM (RAG).
